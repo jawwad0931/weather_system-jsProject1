@@ -1,0 +1,48 @@
+body {
+  background-image: url('images/bg.jpg');
+  background-size: cover;
+}
+
+.weather-card {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+#search-btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+img {
+  margin-top: 15px;
+  border-radius: 8px;
+}
+
+p {
+  margin-bottom: 5px;
+}
+
+span {
+  font-weight: bold;
+}
+
+.inline-info {
+  display: inline-block;
+  margin-right: 10px;
+}

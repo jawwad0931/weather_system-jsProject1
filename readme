@@ -1,0 +1,2 @@
+https://api.openweathermap.org/data/2.5/weather?q=karachi&callback=test&appid=9e2da9e1167e66f66097b2b4805d155e&units=metrics
+yeh hamara API ka path hai
