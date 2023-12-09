@@ -27,7 +27,7 @@ async function checkweather(city){
     document.querySelector(".Longitude").innerHTML =  data.coord.lon;
     document.querySelector(".Latitude").innerHTML =  data.coord.lat;
     // yahan conditions ki base per hum image ko fetch kar rahay hai yahan per source path ki defne kiya hai
-    if (data.weather[0].main == "Cloud") {
+    if (data.weather[0].main == "Clouds") {
         weatherImagefetch.src = "images/clouds.png";
     } else if (data.weather[0].main == "Rain") {
         weatherImagefetch.src = "images/rain.png";
@@ -39,6 +39,13 @@ async function checkweather(city){
         weatherImagefetch.src = "images/mist.png";
     } else if (data.weather[0].main == "Snow") {
         weatherImagefetch.src = "images/snow.png";
+    }else if (data.weather[0].main == "Haze") {
+        weatherImagefetch.src = "images/haze.png";
+    }else if (data.weather[0].main == "Smoke") {
+        weatherImagefetch.src = "images/smoke.png";
+    }
+    else{
+        console.log("Not Run");
     }  
 }
 // yeh eventListener hai yaha hum jo input field mai type karaingay wo easily dekh sakhtay hain
