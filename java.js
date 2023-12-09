@@ -6,7 +6,7 @@ const ApiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metrics&q=
 const SearchField = document.querySelector(".searchfield");
 const SearchButton = document.querySelector(".searchbtn");
 // ye image ki class hai jisse get kiya gaya hai
-const weatherImage = document.querySelector(".weatherImage");
+const weatherImagefetch = document.querySelector(".weatherImage");
 
 
 
@@ -26,35 +26,21 @@ async function checkweather(city){
     document.querySelector(".Description").innerHTML =  data.weather[0].description;
     document.querySelector(".Longitude").innerHTML =  data.coord.lon;
     document.querySelector(".Latitude").innerHTML =  data.coord.lat;
-
-
-
-
-
-
     // yahan conditions ki base per hum image ko fetch kar rahay hai yahan per source path ki defne kiya hai
-    if(data.weather[0].main == "Cloud"){
-        weatherImage.src="Images/clouds.png"; 
-    }
-    else if(data.weather[0].main == "Rain"){
-        weatherImage.src="Images/rain.png";
-    }
-    else if(data.weather[0].main == "Drizzle"){
-        weatherImage.src="Images/drizzle.png";
-    }
-    else if(data.weather[0].main == "Clear"){
-        weatherImage.src="Images/clear.png";
-    }
-    else if(data.weather[0].main == "Mist"){
-        weatherImage.src="Images/mist.png";
-    }
-    else if(data.weather[0].main == "Snow"){
-        weatherImage.src="Images/snow.png";
-    }
+    if (data.weather[0].main == "Cloud") {
+        weatherImagefetch.src = "images/clouds.png";
+    } else if (data.weather[0].main == "Rain") {
+        weatherImagefetch.src = "images/rain.png";
+    } else if (data.weather[0].main == "Drizzle") {
+        weatherImagefetch.src = "images/drizzle.png";
+    } else if (data.weather[0].main == "Clear") {
+        weatherImagefetch.src = "images/clear.png";
+    } else if (data.weather[0].main == "Mist") {
+        weatherImagefetch.src = "images/mist.png";
+    } else if (data.weather[0].main == "Snow") {
+        weatherImagefetch.src = "images/snow.png";
+    }  
 }
-
-
-
 // yeh eventListener hai yaha hum jo input field mai type karaingay wo easily dekh sakhtay hain
 SearchButton.addEventListener("click" , ()=>{
     checkweather(SearchField.value);
